@@ -117,28 +117,66 @@
 
     @media (max-width: 760px) {
       .hero-shop {
-        min-height: 82vh;
+        min-height: 78vh;
         justify-content: flex-end !important;
-        padding: 92px 16px 24px !important;
+        padding: 92px 12px 18px !important;
         background:
           linear-gradient(270deg, rgba(3, 8, 10, .64) 0%, rgba(3, 8, 10, .28) 42%, rgba(3, 8, 10, .08) 100%),
           linear-gradient(180deg, rgba(3,8,10,.04), rgba(3,8,10,.28)),
-          url("assets/hero-wushu-black-wide.png") center center / cover no-repeat,
+          url("assets/hero-wushu-black-wide.png") 42% center / cover no-repeat,
           #05090b !important;
       }
 
       .hero-shop .hero-copy {
-        max-width: 300px;
-        padding: 12px;
-        border-radius: 16px;
+        width: min(58vw, 238px);
+        max-width: 238px;
+        padding: 10px;
+        border-radius: 14px;
+        margin-right: 0;
+        background: linear-gradient(145deg, rgba(3, 10, 12, .32), rgba(3, 10, 12, .14));
+        backdrop-filter: blur(8px);
+        box-shadow: 0 14px 38px rgba(0, 0, 0, .16);
       }
 
       .hero-shop h1 {
-        font-size: clamp(24px, 7vw, 34px) !important;
+        font-size: clamp(20px, 5.8vw, 28px) !important;
+        margin-bottom: 6px;
+      }
+
+      .hero-shop .hero-slogan {
+        font-size: 10px !important;
+        line-height: 1.45;
       }
 
       .hero-shop .hero-text {
-        font-size: 11px !important;
+        font-size: 10px !important;
+        line-height: 1.45;
+        margin: 10px 0 12px;
+      }
+
+      .hero-shop .eyebrow {
+        font-size: 7px !important;
+        letter-spacing: .24em;
+      }
+
+      .hero-shop .eyebrow span {
+        width: 22px;
+      }
+
+      .hero-shop .hero-actions {
+        gap: 8px !important;
+      }
+
+      .hero-shop .hero-actions .button,
+      .hero-shop .hero-actions .text-link {
+        min-height: 38px !important;
+        padding: 7px 10px !important;
+        font-size: 10px !important;
+        gap: 10px !important;
+      }
+
+      .hero-shop .hero-proof {
+        display: none !important;
       }
     }
 
@@ -628,8 +666,8 @@
     </div>
   </div>
 
-  <script src="content-new.js?v=20260825-mobile-form-top"></script>
-  <script src="script.js?v=20260825-mobile-form-top"></script>
+  <script src="content-new.js?v=20260825-mobile-hero-card"></script>
+  <script src="script.js?v=20260825-mobile-hero-card"></script>
   <script>
     function renderProductCardsIfNeeded() {
       const productGrid = document.querySelector(".product-grid");
