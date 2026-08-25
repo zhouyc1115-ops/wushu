@@ -148,35 +148,18 @@ dialog.addEventListener('close', () => {
   document.body.style.overflow = '';
 });
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+form.addEventListener('submit', () => {
+  const submittedAt = document.querySelector('#submittedAt');
+  if (submittedAt) {
+    submittedAt.value = new Date().toLocaleString();
+  }
+
   const enquiry = Object.fromEntries(new FormData(form));
   enquiry.createdAt = new Date().toISOString();
 
   const enquiries = JSON.parse(localStorage.getItem('martial-shop-enquiries') || '[]');
   enquiries.push(enquiry);
   localStorage.setItem('martial-shop-enquiries', JSON.stringify(enquiries));
-
-  const subject = `商品咨询 / Order Enquiry - ${enquiry.product || '创武武术器械馆'}`;
-  const body = [
-    '新的商品咨询 / New Order Enquiry',
-    '',
-    `姓名 / Name: ${enquiry.name || ''}`,
-    `联系方式 / Contact: ${enquiry.contact || ''}`,
-    `想购买的商品 / Product: ${enquiry.product || ''}`,
-    `数量 / Quantity: ${enquiry.quantity || ''}`,
-    `用途 / Purpose: ${enquiry.purpose || ''}`,
-    `备注 / Notes: ${enquiry.note || ''}`,
-    '',
-    `提交时间 / Submitted At: ${new Date(enquiry.createdAt).toLocaleString()}`
-  ].join('\n');
-
-  const mailto = `mailto:${content.companyEmail || ''}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  window.location.href = mailto;
-
-  form.hidden = true;
-  successState.hidden = false;
-  form.reset();
 });
 
 const observer = new IntersectionObserver((entries) => {
