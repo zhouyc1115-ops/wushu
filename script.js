@@ -118,22 +118,42 @@ function openOrder(product = '') {
     });
     form.elements.product.value = option ? option.value : product;
   }
-  dialog.showModal();
+  dialog.classList.add('is-open');
+  if (!dialog.open) {
+    if (typeof dialog.showModal === 'function') {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute('open', '');
+    }
+  }
+  document.body.classList.add('order-open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeOrder() {
-  dialog.close();
+  dialog.classList.remove('is-open');
+  if (typeof dialog.close === 'function' && dialog.open) {
+    dialog.close();
+  } else {
+    dialog.removeAttribute('open');
+  }
+  document.body.classList.remove('order-open');
   document.body.style.overflow = '';
 }
 
-document.querySelectorAll('[data-open-order]').forEach((button) => {
-  button.addEventListener('click', () => openOrder());
-});
-
 document.addEventListener('click', (event) => {
+  const orderButton = event.target.closest('[data-open-order]');
+  if (orderButton) {
+    event.preventDefault();
+    openOrder();
+    return;
+  }
+
   const productButton = event.target.closest('[data-product]');
-  if (productButton) openOrder(productButton.dataset.product);
+  if (productButton) {
+    event.preventDefault();
+    openOrder(productButton.dataset.product);
+  }
 });
 
 document.querySelectorAll('[data-close-order]').forEach((button) => {
@@ -145,6 +165,8 @@ dialog.addEventListener('click', (event) => {
 });
 
 dialog.addEventListener('close', () => {
+  dialog.classList.remove('is-open');
+  document.body.classList.remove('order-open');
   document.body.style.overflow = '';
 });
 

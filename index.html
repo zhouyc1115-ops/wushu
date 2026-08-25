@@ -424,6 +424,37 @@
     .order-dialog blockquote {
       color: rgba(237, 250, 250, .78) !important;
     }
+
+    body.order-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(2, 8, 10, .72);
+      backdrop-filter: blur(5px);
+    }
+
+    .order-dialog.is-open {
+      display: grid !important;
+      position: fixed !important;
+      left: 50% !important;
+      top: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      z-index: 1000 !important;
+      width: min(900px, calc(100vw - 28px)) !important;
+      max-height: calc(100dvh - 28px) !important;
+    }
+
+    .order-dialog.is-open::backdrop {
+      background: rgba(2, 8, 10, .72);
+      backdrop-filter: blur(5px);
+    }
+
+    @media(max-width: 900px) {
+      .order-dialog.is-open {
+        grid-template-columns: 1fr !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -505,7 +536,7 @@
   <footer>
     <a class="brand brand-light" href="#top"><span>创武武术器械馆<small>CHUANGWU MARTIAL SHOP</small></span></a>
     <p>商品：武术器械 / 服装 / 配件 / 个性化定制 · Wushu weapons / costumes / accessories / customization</p>
-    <p>© 2026 创武武术器械馆</p>
+    <p>© 创武武术器械馆</p>
   </footer>
 
   <dialog class="order-dialog" id="orderDialog">
@@ -552,8 +583,8 @@
     </div>
   </dialog>
 
-  <script src="content-new.js"></script>
-  <script src="script.js"></script>
+  <script src="content-new.js?v=20260825-email"></script>
+  <script src="script.js?v=20260825-email"></script>
   <script>
     function renderProductCardsIfNeeded() {
       const productGrid = document.querySelector(".product-grid");
