@@ -455,6 +455,51 @@
         grid-template-columns: 1fr !important;
       }
     }
+
+    @media(max-width: 560px) {
+      .site-header > .button {
+        display: inline-flex !important;
+        min-height: 38px !important;
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+        gap: 8px !important;
+      }
+
+      .order-dialog.is-open {
+        top: max(76px, env(safe-area-inset-top)) !important;
+        transform: translateX(-50%) !important;
+        max-height: calc(100dvh - max(96px, env(safe-area-inset-top)) - 20px) !important;
+        overflow: auto !important;
+        width: calc(100vw - 26px) !important;
+      }
+
+      .order-dialog::before {
+        content: "商品咨询 / Order Enquiry";
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        display: block;
+        padding: 16px 58px 12px 24px;
+        background: rgba(6, 18, 21, .96);
+        border-bottom: 1px solid rgba(144, 244, 239, .18);
+        color: #edfafa;
+        font-weight: 900;
+        letter-spacing: .06em;
+      }
+
+      .order-dialog form {
+        padding-top: 26px !important;
+      }
+
+      .dialog-close {
+        position: sticky !important;
+        float: right;
+        top: 8px !important;
+        right: 10px !important;
+        z-index: 6 !important;
+        margin: 8px 10px -48px auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -539,7 +584,7 @@
     <p>© 创武武术器械馆</p>
   </footer>
 
-  <dialog class="order-dialog" id="orderDialog">
+  <div class="order-dialog" id="orderDialog" role="dialog" aria-modal="true" hidden>
     <button class="dialog-close" data-close-order aria-label="关闭窗口">×</button>
     <div class="dialog-intro">
       <p class="section-kicker">ORDER ENQUIRY</p>
@@ -581,10 +626,10 @@
       <p>谢谢，我会尽快与你确认商品库存和下单方式。Thank you, we will confirm stock and order details soon.</p>
       <button class="button" data-close-order>好的 / OK</button>
     </div>
-  </dialog>
+  </div>
 
-  <script src="content-new.js?v=20260825-email"></script>
-  <script src="script.js?v=20260825-email"></script>
+  <script src="content-new.js?v=20260825-mobile-form-top"></script>
+  <script src="script.js?v=20260825-mobile-form-top"></script>
   <script>
     function renderProductCardsIfNeeded() {
       const productGrid = document.querySelector(".product-grid");
