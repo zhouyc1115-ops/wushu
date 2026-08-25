@@ -110,6 +110,7 @@ function renderOrderOptions() {
 }
 
 function openOrder(product = '') {
+  dialog.hidden = false;
   form.hidden = false;
   successState.hidden = true;
   if (product) {
@@ -119,24 +120,15 @@ function openOrder(product = '') {
     form.elements.product.value = option ? option.value : product;
   }
   dialog.classList.add('is-open');
-  if (!dialog.open) {
-    if (typeof dialog.showModal === 'function') {
-      dialog.showModal();
-    } else {
-      dialog.setAttribute('open', '');
-    }
-  }
+  dialog.setAttribute('open', '');
   document.body.classList.add('order-open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeOrder() {
   dialog.classList.remove('is-open');
-  if (typeof dialog.close === 'function' && dialog.open) {
-    dialog.close();
-  } else {
-    dialog.removeAttribute('open');
-  }
+  dialog.removeAttribute('open');
+  dialog.hidden = true;
   document.body.classList.remove('order-open');
   document.body.style.overflow = '';
 }
@@ -162,12 +154,6 @@ document.querySelectorAll('[data-close-order]').forEach((button) => {
 
 dialog.addEventListener('click', (event) => {
   if (event.target === dialog) closeOrder();
-});
-
-dialog.addEventListener('close', () => {
-  dialog.classList.remove('is-open');
-  document.body.classList.remove('order-open');
-  document.body.style.overflow = '';
 });
 
 form.addEventListener('submit', () => {
