@@ -1,0 +1,17 @@
+Upload these files to your GitHub repository:
+
+1. index.html
+2. content-new.js
+3. script.js
+4. styles.css
+5. assets folder
+
+On GitHub, choose:
+uploading an existing file
+
+Then drag the files above into GitHub and click:
+Commit changes
+
+Important:
+Upload the contents inside this github-upload folder.
+Do not upload only the zip file, because GitHub Pages will not unzip it automatically.
