@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260826-desc-align">
   <style>
     .hero-shop {
       position: relative;
@@ -86,6 +86,7 @@
     .hero-shop .eyebrow {
       font-size: 9px !important;
       margin-bottom: 8px;
+      color: #fffdf7 !important;
     }
 
     .hero-shop .hero-slogan {
@@ -124,7 +125,7 @@
         background:
           linear-gradient(270deg, rgba(4, 25, 30, .26) 0%, rgba(4, 25, 30, .08) 46%, rgba(4, 25, 30, .01) 100%),
           linear-gradient(180deg, rgba(255,255,255,.03), rgba(4,25,30,.10)),
-          url("assets/hero-wushu-comfort-premium.png?v=20260825-position-center-2") 64% center / cover no-repeat,
+          url("assets/hero-wushu-comfort-premium.png?v=20260825-mobile-tassel") 42% center / cover no-repeat,
           #e8f1ee !important;
       }
 
@@ -159,6 +160,7 @@
         font-size: 7px !important;
         letter-spacing: .2em;
         margin-bottom: 5px;
+        color: #fffdf7 !important;
       }
 
       .hero-shop .eyebrow span {
@@ -364,7 +366,6 @@
 
     .section-kicker,
     .product-en,
-    .tag,
     .price-row,
     .catalog-list p,
     .section-heading > p,
@@ -372,6 +373,63 @@
     .service-card p,
     .cta p {
       color: rgba(220, 247, 246, .70) !important;
+    }
+
+    .product-card > p:not(.tag, .product-en),
+    .product-card .tag {
+      color: #d8f4ee !important;
+      font-family: var(--sans) !important;
+      font-weight: 800 !important;
+      letter-spacing: .03em;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, .45);
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .product-card .tag {
+      margin-left: 28px !important;
+      margin-right: 28px !important;
+      color: #f4c542 !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      font-size: 10px !important;
+      font-weight: 950 !important;
+      letter-spacing: .18em;
+      opacity: 1 !important;
+      box-shadow: none !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .58) !important;
+    }
+
+    .product-card .price-row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 28px !important;
+      padding-right: 28px !important;
+      justify-content: flex-start !important;
+      text-align: left !important;
+    }
+
+    .product-card .price-row span {
+      display: block !important;
+      margin-left: 0 !important;
+      color: #f4c542 !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      font-size: 10px !important;
+      font-weight: 950 !important;
+      letter-spacing: .12em !important;
+      opacity: 1 !important;
+      box-shadow: none !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .58) !important;
+    }
+
+    .product-card .desc-en {
+      display: block;
+      margin-top: 4px;
     }
 
     .product-card,
@@ -561,7 +619,7 @@
         <p class="eyebrow"><span></span> WUSHU EQUIPMENT · SINGAPORE</p>
         <h1>武术器械<br><em>一站配齐</em></h1>
         <p class="hero-slogan">刀 · 剑 · 棍 · 枪 · 服装 · 配件 / Broadswords · Swords · Cudgels · Spears · Costumes · Accessories</p>
-        <p class="hero-text">为训练、表演与比赛准备可靠装备。Reliable equipment for training, performance and competition.</p>
+        <p class="hero-text">创武武术器械馆为学员、教练、武馆与学校提供刀剑棍枪服装和配件选购服务。For students, coaches, schools and training centers.</p>
         <div class="hero-actions">
           <a class="button" href="#products">浏览商品 / Shop <span>↓</span></a>
           <button class="text-link" data-open-order>我要询价 / Enquire <span>↗</span></button>
@@ -580,7 +638,7 @@
       <p class="section-kicker">CHUANGWU SELECTION</p>
       <div>
         <h2>从训练到赛场<br>装备一次<em>配齐</em></h2>
-        <p>创武武术器械馆为学员、教练、武馆与表演队提供刀、剑、棍、枪、服装和配件选购服务。We help students, coaches and teams choose the right wushu weapons, costumes and accessories.</p>
+        <p>创武武术器械馆为学员、教练、武馆与学校提供刀剑棍枪服装和配件选购服务。We help students, coaches, schools and training centers choose the right wushu weapons, costumes and accessories.</p>
       </div>
     </section>
 
@@ -668,13 +726,19 @@
     </div>
   </div>
 
-  <script src="content-new.js?v=20260825-comfort-premium-hero"></script>
-  <script src="script.js?v=20260825-comfort-premium-hero"></script>
+  <script src="content-new.js?v=20260826-desc-break"></script>
+  <script src="script.js?v=20260826-desc-break"></script>
   <script>
     function renderProductCardsIfNeeded() {
       const productGrid = document.querySelector(".product-grid");
       const products = window.siteContent?.products || [];
       if (!productGrid || productGrid.children.length || !products.length) return;
+
+      const formatDescription = (description) => {
+        const text = description || "";
+        const formatted = text.replace(/。 ([A-Z])/g, "。<br><span class=\"desc-en\">$1");
+        return formatted.includes("desc-en") ? `${formatted}</span>` : formatted;
+      };
 
       productGrid.innerHTML = products.map((product) => {
         const tag = product.tag ? `<p class="tag">${product.tag}</p>` : "";
@@ -684,7 +748,7 @@
             ${tag}
             <p class="product-en">${product.english || ""}</p>
             <h3>${product.name}</h3>
-            <p>${product.description || ""}</p>
+            <p>${formatDescription(product.description)}</p>
             <div class="price-row"><span>${product.note || ""}</span></div>
             <button class="card-link" data-product="${product.name} ${product.english || ""}">咨询这件商品 / Enquire <span>→</span></button>
           </article>
