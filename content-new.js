@@ -7,9 +7,9 @@
 window.siteContent = {
   shopName: "创武武术器械馆",
   shopNameEn: "CHUANGWU SPORTS SHOP",
-  pageTitle: "创武武术器械馆 | Wushu Equipment & Costume Shop",
-  pageDescription: "创武武术器械馆提供武术器械、表演服装与配件咨询。Chuangwu Sports Shop offers wushu weapons, performance costumes and training accessories.",
-  footerText: "商品：武术器械 / 服装 / 配件 / 个性化定制 · Wushu weapons / costumes / accessories / customization",
+  pageTitle: "创武武术器械馆 | Wushu Weapons & Equipment Singapore",
+  pageDescription: "创武武术器械馆提供新加坡武术器械、刀剑棍枪、武术服装、训练配件与比赛用品咨询。Chuangwu Sports Shop provides wushu weapons, martial arts equipment, costumes and training accessories in Singapore.",
+  footerText: "新加坡武术器械 / 武术服装 / 训练配件 / 服装定制 · Singapore wushu weapons / costumes / accessories / customization",
   companyEmail: "zhouyc1115@gmail.com",
 
   hero: {
@@ -17,7 +17,7 @@ window.siteContent = {
     titleLine1: "武术器械",
     titleLine2: "一站配齐",
     slogan: "刀 · 剑 · 棍 · 枪 · 服装 · 配件 / Broadswords · Swords · Cudgels · Spears · Costumes · Accessories",
-    text: "为训练、表演与比赛准备可靠装备。Reliable equipment for training, performance and competition.",
+    text: "新加坡武术器械、刀剑棍枪、武术服装与训练配件选购服务。Wushu weapons, martial arts equipment, costumes and accessories in Singapore.",
     proofTitle: "训练 / 表演 / 比赛 · Training / Performance / Competition",
     proofText: "支持儿童、成人与团体采购 · For kids, adults and team orders",
     featuredName: "服装",
