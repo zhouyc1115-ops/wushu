@@ -6,9 +6,9 @@
 
 window.siteContent = {
   shopName: "创武武术器械馆",
-  shopNameEn: "CHUANGWU MARTIAL SHOP",
+  shopNameEn: "CHUANGWU SPORTS SHOP",
   pageTitle: "创武武术器械馆 | Wushu Equipment & Costume Shop",
-  pageDescription: "创武武术器械馆提供武术器械、表演服装与配件咨询。Chuangwu Martial Shop offers wushu weapons, performance costumes and training accessories.",
+  pageDescription: "创武武术器械馆提供武术器械、表演服装与配件咨询。Chuangwu Sports Shop offers wushu weapons, performance costumes and training accessories.",
   footerText: "商品：武术器械 / 服装 / 配件 / 个性化定制 · Wushu weapons / costumes / accessories / customization",
   companyEmail: "zhouyc1115@gmail.com",
 
