@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#201d17">
+  <title>创武武术器械馆 | Wushu Equipment & Costume Shop</title>
+  <meta name="description" content="创武武术器械馆提供武术器械、表演服装与配件咨询。Chuangwu Martial Shop offers wushu weapons, performance costumes and training accessories.">
+  <link rel="canonical" href="https://chuangwusports.com/">
+  <meta property="og:title" content="创武武术器械馆 | Chuangwu Martial Shop">
+  <meta property="og:description" content="新加坡武术器械、武术服装与训练配件咨询。Wushu weapons, costumes and accessories in Singapore.">
+  <meta property="og:url" content="https://chuangwusports.com/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260827-size-button-gap-2">
+  <style>
+    .hero-shop {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      display: flex !important;
+      align-items: flex-end !important;
+      justify-content: flex-end !important;
+      min-height: min(760px, 92vh);
+      padding: clamp(88px, 10vh, 120px) clamp(18px, 4vw, 48px) clamp(20px, 4vh, 36px) !important;
+      background:
+        linear-gradient(270deg, rgba(4, 25, 30, .30) 0%, rgba(4, 25, 30, .08) 38%, rgba(4, 25, 30, .01) 72%),
+        linear-gradient(180deg, rgba(255, 255, 255, .04) 0%, rgba(4, 25, 30, .02) 54%, rgba(4, 25, 30, .16) 100%),
+        url("assets/hero-wushu-comfort-premium.png?v=20260825-position-center-2") 60% center / cover no-repeat,
+        #e8f1ee !important;
+      color: #fffdf7;
+    }
+
+    .hero-shop::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 72% 70%, rgba(125, 245, 238, .10), transparent 30%),
+        radial-gradient(circle at 38% 86%, rgba(232, 213, 156, .12), transparent 26%),
+        linear-gradient(115deg, transparent 14%, rgba(191, 238, 233, .06) 14.4%, transparent 14.9%);
+      opacity: .7;
+      pointer-events: none;
+    }
+
+    .hero-shop::after {
+      display: none;
+    }
+
+    .hero-shop .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-shop .hero-scroll {
+      z-index: 2;
+    }
+
+    .hero-shop .hero-copy {
+      max-width: 340px;
+      backdrop-filter: blur(12px);
+      border: 0 !important;
+      border-radius: 18px;
+      padding: clamp(13px, 1.9vw, 20px);
+      background: linear-gradient(145deg, rgba(8, 35, 42, .16), rgba(8, 35, 42, .05));
+      box-shadow: 0 12px 34px rgba(0, 0, 0, .08), inset 0 1px 0 rgba(255, 255, 255, .12);
+      margin-right: clamp(0px, 2vw, 28px);
+    }
+
+    .hero-shop h1,
+    .hero-shop .hero-slogan,
+    .hero-shop .hero-text,
+    .hero-shop .hero-proof {
+      color: #fffdf7;
+      text-shadow: 0 2px 16px rgba(0, 0, 0, .72);
+    }
+
+    .hero-shop h1 {
+      font-size: clamp(26px, 3.4vw, 44px) !important;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .hero-shop h1 em {
+      color: #bfeee9;
+    }
+
+    .hero-shop .eyebrow {
+      font-size: 9px !important;
+      margin-bottom: 8px;
+      color: #fffdf7 !important;
+    }
+
+    .hero-shop .hero-slogan {
+      font-size: clamp(12px, 1.2vw, 14px) !important;
+      margin-bottom: 6px;
+    }
+
+    .hero-shop .hero-text {
+      font-size: 13px !important;
+      line-height: 1.55;
+    }
+
+    .hero-shop .hero-actions {
+      margin-top: 12px !important;
+    }
+
+    .hero-shop .hero-proof {
+      margin-top: 12px !important;
+    }
+
+    .hero-shop .hero-actions .button,
+    .hero-shop .hero-actions .text-link {
+      font-size: 12px !important;
+      padding: 9px 14px !important;
+    }
+
+    .hero-shop .hero-proof {
+      font-size: 12px !important;
+    }
+
+    @media (max-width: 760px) {
+      .hero-shop {
+        min-height: 78vh;
+        justify-content: flex-start !important;
+        padding: 92px 12px 18px !important;
+        background:
+          linear-gradient(270deg, rgba(4, 25, 30, .26) 0%, rgba(4, 25, 30, .08) 46%, rgba(4, 25, 30, .01) 100%),
+          linear-gradient(180deg, rgba(255,255,255,.03), rgba(4,25,30,.10)),
+          url("assets/hero-wushu-comfort-premium.png?v=20260827-mobile-hero-right") 56% center / cover no-repeat,
+          #e8f1ee !important;
+      }
+
+      .hero-shop .hero-copy {
+        width: min(47vw, 190px);
+        max-width: 190px;
+        padding: 9px;
+        border-radius: 12px;
+        margin: 0;
+        background: linear-gradient(145deg, rgba(6, 28, 34, .12), rgba(6, 28, 34, .03));
+        backdrop-filter: blur(3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .06), inset 0 1px 0 rgba(255, 255, 255, .08);
+      }
+
+      .hero-shop h1 {
+        font-size: clamp(17px, 4.9vw, 23px) !important;
+        margin-bottom: 4px;
+      }
+
+      .hero-shop .hero-slogan {
+        font-size: 8px !important;
+        line-height: 1.38;
+      }
+
+      .hero-shop .hero-text {
+        font-size: 8px !important;
+        line-height: 1.4;
+        margin: 7px 0 8px;
+      }
+
+      .hero-shop .eyebrow {
+        font-size: 7px !important;
+        letter-spacing: .2em;
+        margin-bottom: 5px;
+        color: #fffdf7 !important;
+      }
+
+      .hero-shop .eyebrow span {
+        width: 16px;
+      }
+
+      .hero-shop .hero-actions {
+        gap: 6px !important;
+      }
+
+      .hero-shop .hero-actions .button,
+      .hero-shop .hero-actions .text-link {
+        min-height: 30px !important;
+        padding: 5px 8px !important;
+        font-size: 8px !important;
+        gap: 7px !important;
+      }
+
+      .hero-shop .hero-proof {
+        display: none !important;
+      }
+    }
+
+    .product-art.real-product-image {
+      min-height: clamp(240px, 28vw, 330px) !important;
+      background-size: contain !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-color: #fff !important;
+    }
+
+    .product-art.real-product-image::before,
+    .product-art.real-product-image::after {
+      display: none !important;
+    }
+
+    .product-art.show-full-image {
+      background-size: contain !important;
+      background-color: #fff !important;
+    }
+
+    .product-art.show-original-image {
+      background-size: contain !important;
+      background-color: #fff !important;
+    }
+
+    .product-art.white-product-image {
+      background-color: #fff !important;
+      background-blend-mode: normal !important;
+    }
+
+    .size-options,
+    .gender-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 28px 0;
+    }
+
+    .size-options {
+      margin-bottom: 28px;
+    }
+
+    .size-options strong,
+    .gender-options strong {
+      width: 100%;
+      font-size: 10px;
+      letter-spacing: .16em;
+      color: #dffdfb;
+      opacity: .9;
+    }
+
+    .size-options button,
+    .gender-options button {
+      border: 1px solid rgba(223, 253, 251, .72);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      background: rgba(239, 255, 253, .92);
+      color: #061012;
+      cursor: pointer;
+      transition: .2s;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
+    }
+
+    .size-row-break {
+      flex-basis: 100%;
+      height: 0;
+    }
+
+    .size-options button:hover,
+    .size-options button.is-selected,
+    .gender-options button:hover,
+    .gender-options button.is-selected {
+      background: linear-gradient(135deg, #fff4b8, #76d8d4);
+      color: #061012;
+      border-color: #fff4b8;
+      box-shadow: 0 10px 24px rgba(118, 216, 212, .28);
+    }
+
+    .catalog-images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .catalog-images img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: contain;
+      display: block;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 16px 36px rgba(34, 92, 101, .12);
+    }
+
+    .catalog-next {
+      align-self: flex-start;
+      border: 1px solid rgba(53, 120, 128, .35);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 800;
+      background: #12343b;
+      color: #fffdf7;
+      cursor: pointer;
+    }
+
+    .site-header .brand {
+      transform: translateX(-12px);
+    }
+
+    .brand-mark {
+      width: 48px !important;
+      height: 48px !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      overflow: hidden;
+      box-shadow: none !important;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-mark i {
+      display: none !important;
+    }
+
+    .site-header nav {
+      margin-left: clamp(18px, 3vw, 42px) !important;
+      margin-right: auto !important;
+      transform: translateX(-18px);
+    }
+
+    .site-header .button-small {
+      margin-left: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .site-header nav {
+        transform: translateX(-8px);
+      }
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 14% 8%, rgba(91, 221, 216, .20), transparent 28%),
+        radial-gradient(circle at 86% 42%, rgba(76, 151, 171, .18), transparent 32%),
+        linear-gradient(180deg, #071114 0%, #10252a 42%, #071114 100%) !important;
+      color: #edfafa !important;
+    }
+
+    .shop-categories,
+    .philosophy,
+    .products.section,
+    .products.section.pale,
+    .service.section,
+    .cta.section {
+      background:
+        radial-gradient(circle at 88% 8%, rgba(118, 216, 212, .14), transparent 28%),
+        linear-gradient(145deg, rgba(12, 33, 38, .96), rgba(12, 48, 55, .88)) !important;
+      color: #edfafa !important;
+    }
+
+    .products.section.pale {
+      background:
+        radial-gradient(circle at 18% 12%, rgba(118, 216, 212, .15), transparent 28%),
+        linear-gradient(145deg, #0b1b20, #12343b) !important;
+    }
+
+    .section-heading h2,
+    .philosophy h2,
+    .service-card h2,
+    .cta h2,
+    .product-card h3,
+    .catalog-list h3,
+    footer,
+    footer a {
+      color: #edfafa !important;
+    }
+
+    .section-kicker,
+    .product-en,
+    .price-row,
+    .catalog-list p,
+    .section-heading > p,
+    .philosophy p,
+    .service-card p,
+    .cta p {
+      color: rgba(220, 247, 246, .70) !important;
+    }
+
+    .product-card > p:not(.tag, .product-en),
+    .product-card .tag {
+      color: #d8f4ee !important;
+      font-family: var(--sans) !important;
+      font-weight: 800 !important;
+      letter-spacing: .03em;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, .45);
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .product-card .tag {
+      margin-left: 28px !important;
+      margin-right: 28px !important;
+      color: #f4c542 !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      font-size: 10px !important;
+      font-weight: 950 !important;
+      letter-spacing: .18em;
+      opacity: 1 !important;
+      box-shadow: none !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .58) !important;
+    }
+
+    .product-card .price-row {
+      display: block !important;
+      margin-left: 28px !important;
+      margin-right: 28px !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      text-align: left !important;
+    }
+
+    .product-card .price-row span {
+      display: block !important;
+      margin-left: 0 !important;
+      color: #f4c542 !important;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      font-size: 10px !important;
+      font-weight: 950 !important;
+      letter-spacing: .12em !important;
+      opacity: 1 !important;
+      box-shadow: none !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, .58) !important;
+    }
+
+    .product-card .desc-en {
+      display: block;
+      margin-top: 4px;
+    }
+
+    .product-card,
+    .catalog-list > *,
+    .service-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, .085), rgba(255, 255, 255, .035)) !important;
+      border: 1px solid rgba(189, 248, 244, .20) !important;
+      box-shadow: 0 24px 58px rgba(0, 0, 0, .22), inset 0 1px 0 rgba(255, 255, 255, .10) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    .button,
+    .card-link,
+    .catalog-next,
+    .submit-button {
+      background: linear-gradient(135deg, #dffdfb, #76d8d4) !important;
+      color: #061012 !important;
+      border-color: rgba(191, 238, 233, .72) !important;
+      box-shadow: 0 12px 34px rgba(60, 222, 217, .18);
+    }
+
+    .product-card .card-link {
+      margin-top: auto !important;
+      justify-content: flex-start !important;
+      position: relative;
+      font-size: 17px !important;
+      text-align: left !important;
+      letter-spacing: .02em;
+    }
+
+    .product-card .card-link span {
+      position: absolute;
+      right: 18px;
+    }
+
+    .button-light,
+    .text-link {
+      background: rgba(255, 255, 255, .08) !important;
+      color: #dffdfb !important;
+      border-color: rgba(144, 244, 239, .28) !important;
+    }
+
+    .size-options button,
+    .gender-options button {
+      border-color: rgba(223, 253, 251, .72) !important;
+      color: #061012 !important;
+      background: rgba(239, 255, 253, .94) !important;
+    }
+
+    .size-options button:hover,
+    .size-options button.is-selected,
+    .gender-options button:hover,
+    .gender-options button.is-selected {
+      background: linear-gradient(135deg, #fff4b8, #76d8d4) !important;
+      color: #061012 !important;
+      border-color: #fff4b8 !important;
+    }
+
+    footer {
+      background: linear-gradient(145deg, #071114, #102d33) !important;
+      color: #edfafa !important;
+    }
+
+    footer p,
+    footer small {
+      color: rgba(237, 250, 250, .70) !important;
+    }
+
+    .site-header {
+      background: rgba(5, 17, 20, .46) !important;
+      border-color: rgba(189, 248, 244, .16) !important;
+      backdrop-filter: blur(18px);
+    }
+
+    .site-header a,
+    .site-header small {
+      color: #edfafa !important;
+    }
+
+    .order-dialog {
+      background:
+        radial-gradient(circle at 12% 8%, rgba(72, 230, 224, .13), transparent 28%),
+        linear-gradient(145deg, #071114, #0d2227) !important;
+      color: #edfafa !important;
+      border: 1px solid rgba(144, 244, 239, .18) !important;
+      box-shadow: 0 40px 120px rgba(0, 0, 0, .58) !important;
+    }
+
+    .order-dialog input,
+    .order-dialog select,
+    .order-dialog textarea {
+      background: rgba(255, 255, 255, .08) !important;
+      color: #edfafa !important;
+      border-color: rgba(144, 244, 239, .24) !important;
+    }
+
+    .order-dialog input::placeholder,
+    .order-dialog textarea::placeholder {
+      color: rgba(237, 250, 250, .45) !important;
+    }
+
+    .order-dialog label,
+    .order-dialog p,
+    .order-dialog blockquote {
+      color: rgba(237, 250, 250, .78) !important;
+    }
+
+    body.order-open::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(2, 8, 10, .72);
+      backdrop-filter: blur(5px);
+    }
+
+    .order-dialog.is-open {
+      display: grid !important;
+      position: fixed !important;
+      left: 50% !important;
+      top: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      z-index: 1000 !important;
+      width: min(900px, calc(100vw - 28px)) !important;
+      max-height: calc(100dvh - 28px) !important;
+    }
+
+    .order-dialog.is-open::backdrop {
+      background: rgba(2, 8, 10, .72);
+      backdrop-filter: blur(5px);
+    }
+
+    @media(max-width: 900px) {
+      .order-dialog.is-open {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media(max-width: 560px) {
+      .site-header > .button {
+        display: inline-flex !important;
+        min-height: 38px !important;
+        padding: 8px 12px !important;
+        font-size: 11px !important;
+        gap: 8px !important;
+      }
+
+      .order-dialog.is-open {
+        top: max(76px, env(safe-area-inset-top)) !important;
+        transform: translateX(-50%) !important;
+        max-height: calc(100dvh - max(96px, env(safe-area-inset-top)) - 20px) !important;
+        overflow: auto !important;
+        width: calc(100vw - 26px) !important;
+      }
+
+      .order-dialog::before {
+        content: "商品咨询 / Order Enquiry";
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        display: block;
+        padding: 16px 58px 12px 24px;
+        background: rgba(6, 18, 21, .96);
+        border-bottom: 1px solid rgba(144, 244, 239, .18);
+        color: #edfafa;
+        font-weight: 900;
+        letter-spacing: .06em;
+      }
+
+      .order-dialog form {
+        padding-top: 26px !important;
+      }
+
+      .dialog-close {
+        position: sticky !important;
+        float: right;
+        top: 8px !important;
+        right: 10px !important;
+        z-index: 6 !important;
+        margin: 8px 10px -48px auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="创武武术器械馆首页">
+      <span>创武武术器械馆<small>CHUANGWU MARTIAL SHOP</small></span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#products">器械 <small>WEAPONS</small></a>
+      <a href="#uniforms">服装 <small>COSTUMES</small></a>
+      <a href="#service">服务 <small>SERVICE</small></a>
+    </nav>
+    <button class="button button-small" data-open-order>咨询下单 / Enquire</button>
+  </header>
+
+  <main id="top">
+    <section class="hero hero-shop">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> WUSHU EQUIPMENT · SINGAPORE</p>
+        <h1>武术器械<br><em>一站配齐</em></h1>
+        <p class="hero-slogan">刀 · 剑 · 棍 · 枪 · 服装 · 配件 / Broadswords · Swords · Cudgels · Spears · Costumes · Accessories</p>
+        <p class="hero-text">创武武术器械馆为学员、教练、武馆与学校提供刀剑棍枪服装和配件选购服务。For students, coaches, schools and training centers.</p>
+        <div class="hero-actions">
+          <a class="button" href="#products">浏览商品 / Shop <span>↓</span></a>
+          <button class="text-link" data-open-order>我要询价 / Enquire <span>↗</span></button>
+        </div>
+        <div class="hero-proof">
+          <div class="avatars" aria-hidden="true"><b>刀</b><b>剑</b><b>棍</b><b>枪</b></div>
+          <p><strong>训练 / 表演 / 比赛</strong><br><span>Kids · Adults · Team Orders</span></p>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">SHOP <span></span></div>
+    </section>
+
+    <section class="shop-categories" aria-label="商品分类"></section>
+
+    <section class="philosophy">
+      <p class="section-kicker">CHUANGWU SELECTION</p>
+      <div>
+        <h2>从训练到赛场<br>装备一次<em>配齐</em></h2>
+        <p>创武武术器械馆为学员、教练、武馆与学校提供刀剑棍枪服装和配件选购服务。We help students, coaches, schools and training centers choose the right wushu weapons, costumes and accessories.</p>
+      </div>
+    </section>
+
+    <section class="products section" id="products">
+      <div class="section-heading">
+        <div><p class="section-kicker">BEST SELLERS</p><h2>热门武术器械 / Popular Wushu Equipment</h2></div>
+        <p>先提交需求，再确认库存、尺寸和取货/配送方式。Send your request first, then confirm stock, size and delivery.</p>
+      </div>
+      <div class="product-grid"></div>
+    </section>
+
+    <section class="products section pale" id="uniforms">
+      <div class="section-heading">
+        <div><p class="section-kicker">COSTUMES</p><h2>武术服装 / Wushu Costumes</h2></div>
+        <p>适合日常训练、比赛表演、武馆统一订购。For daily training, competition, performance and team orders.</p>
+      </div>
+      <div class="catalog-list"></div>
+    </section>
+
+    <section class="service section" id="service">
+      <div class="service-card reveal">
+        <p class="section-kicker">PERSONALIZATION</p>
+        <h2>团队采购与服装定制 / Team Orders & Costume Customization</h2>
+        <p>可以为武馆、学校、表演队提供批量订购、图案刺绣和配套器械建议。Bulk orders, pattern embroidery and equipment matching are available.</p>
+        <div class="service-points"></div>
+        <button class="button button-light" data-open-order>提交采购需求 / Submit Request <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <p class="section-kicker">READY TO ORDER</p>
+      <h2>严选好器械，训练更安心<br><em>品质可靠，选择更放心</em></h2>
+      <button class="button button-light" data-open-order>马上咨询 / Enquire Now <span>↗</span></button>
+      <p>从刀剑棍枪到表演服装与配件，每一件都注重手感、做工与适配度。告诉我你的需求，我们帮你确认更可靠的选择。From weapons to costumes and accessories, every item is selected for feel, workmanship and fit.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand brand-light" href="#top"><span>创武武术器械馆<small>CHUANGWU MARTIAL SHOP</small></span></a>
+    <p>商品：武术器械 / 服装 / 配件 / 个性化定制 · Wushu weapons / costumes / accessories / customization</p>
+    <p>© 创武武术器械馆</p>
+  </footer>
+
+  <div class="order-dialog" id="orderDialog" role="dialog" aria-modal="true" hidden>
+    <button class="dialog-close" data-close-order aria-label="关闭窗口">×</button>
+    <div class="dialog-intro">
+      <p class="section-kicker">ORDER ENQUIRY</p>
+      <h2>商品咨询<br>与下单</h2>
+      <p>填写你想购买的商品、数量和联系方式，我会尽快确认尺寸、库存与配送。Fill in your item, quantity and contact details.</p>
+      <blockquote>“先选对器械，再练出手感。” Choose the right equipment, then train with confidence.</blockquote>
+    </div>
+    <form id="orderForm" action="https://formsubmit.co/zhouyc1115@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="创武武术器械馆商品咨询 / Chuangwu Martial Shop Enquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="http://chuangwusports.com/">
+      <input type="hidden" name="submitted_at" id="submittedAt" value="">
+      <label>姓名 / Name <input name="name" type="text" placeholder="请输入你的姓名 / Your name" required></label>
+      <label>联系方式 / Contact <input name="contact" type="text" placeholder="手机号 / WhatsApp / 微信" required></label>
+      <label>想购买的商品 / Product
+        <select name="product" required><option value="">请选择商品 / Select a product</option></select>
+      </label>
+      <div class="form-row">
+        <label>数量 / Quantity <input name="quantity" type="number" min="1" value="1" required></label>
+        <label>用途 / Purpose
+          <select name="purpose" required>
+            <option value="">请选择 / Select</option>
+            <option>日常训练 / Daily Training</option>
+            <option>比赛表演 / Competition & Performance</option>
+            <option>学校 / 武馆团购 / School or Club Order</option>
+            <option>礼物 / 收藏 / Gift or Collection</option>
+          </select>
+        </label>
+      </div>
+      <label>备注 / Notes <textarea name="note" rows="3" placeholder="例如 / Example: height 135cm, needs broad sword; or 20 team uniforms with embroidery."></textarea></label>
+      <label class="consent"><input type="checkbox" required> <span>我同意使用以上信息进行商品咨询与联络 / I agree to be contacted about this enquiry.</span></label>
+      <button class="button submit-button" type="submit">提交咨询 / Submit <span>→</span></button>
+    </form>
+    <div class="success-state" id="successState" hidden>
+      <div class="success-mark">✓</div>
+      <p class="section-kicker">ENQUIRY RECEIVED</p>
+      <h2>咨询已收到 / Enquiry Received</h2>
+      <p>谢谢，我会尽快与你确认商品库存和下单方式。Thank you, we will confirm stock and order details soon.</p>
+      <button class="button" data-close-order>好的 / OK</button>
+    </div>
+  </div>
+
+  <script src="content-new.js?v=20260827-jingsaidao-new"></script>
+  <script src="script.js?v=20260826-desc-break"></script>
+  <script>
+    function renderProductCardsIfNeeded() {
+      const productGrid = document.querySelector(".product-grid");
+      const products = window.siteContent?.products || [];
+      if (!productGrid || productGrid.children.length || !products.length) return;
+
+      const formatDescription = (description) => {
+        const text = description || "";
+        const formatted = text.replace(/。 ([A-Z])/g, "。<br><span class=\"desc-en\">$1");
+        return formatted.includes("desc-en") ? `${formatted}</span>` : formatted;
+      };
+
+      productGrid.innerHTML = products.map((product) => {
+        const tag = product.tag ? `<p class="tag">${product.tag}</p>` : "";
+        return `
+          <article class="product-card ${product.featured ? "featured" : ""} reveal">
+            <div class="product-art ${product.art || ""}" aria-hidden="true"></div>
+            ${tag}
+            <p class="product-en">${product.english || ""}</p>
+            <h3>${product.name}</h3>
+            <p>${formatDescription(product.description)}</p>
+            <div class="price-row"><span>${product.note || ""}</span></div>
+            <button class="card-link" data-product="${product.name} ${product.english || ""}">咨询这件商品 / Enquire <span>→</span></button>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function applyShopEnhancements() {
+      renderProductCardsIfNeeded();
+
+      document.querySelectorAll(".product-card").forEach((card) => {
+        card.innerHTML = card.innerHTML.replaceAll("undefined", "");
+      });
+
+      const productImages = document.querySelectorAll(".product-card .product-art");
+      const imagePaths = [
+        "assets/xunliandao.jpg",
+        "assets/jingsaidao-new.jpg",
+        "assets/jingsai-nandao.jpg",
+        "assets/xublianjian.jpg",
+        "assets/jingsaijian-new.jpg",
+        "assets/xunliangun.jpg",
+        "assets/jingsaigun.PNG",
+        "assets/jingsaigun.PNG",
+        "assets/xunlianqiang-new.jpg",
+        "assets/jingsaiqiang.jpg",
+        "assets/jianshui.jpg",
+        "assets/daocai.jpg",
+        "assets/daojiandai-new.jpg",
+        "assets/wushu-mat.jpeg"
+      ];
+
+      imagePaths.forEach((path, index) => {
+        const productImage = productImages[index];
+        if (!productImage) return;
+
+        productImage.classList.add("real-product-image");
+        if (
+          path.includes("jingsaidao") ||
+          path.includes("xunlianqiang") ||
+          path.includes("jingsaiqiang") ||
+          path.includes("jianshui") ||
+          path.includes("daojiandai")
+        ) {
+          productImage.classList.add("white-product-image");
+        }
+        if (path.includes("jingsaiqiang")) productImage.classList.add("show-full-image");
+        if (path.includes("daocai")) productImage.classList.add("show-original-image");
+        if (path.includes("jianshui")) productImage.classList.add("show-original-image");
+        if (path.includes("daojiandai")) productImage.classList.add("show-original-image");
+        productImage.style.backgroundImage = `url('${path}')`;
+      });
+
+      const products = window.siteContent?.products || [];
+      products.forEach((product, index) => {
+        const card = document.querySelectorAll(".product-card")[index];
+        const priceRow = card?.querySelector(".price-row");
+        if (!card || !priceRow) return;
+
+        if (product.name === "剑穗") {
+          card.id = "training-accessories";
+        }
+
+        if (Array.isArray(product.genders) && product.genders.length > 0 && !card.querySelector(".gender-options")) {
+          const genderOptions = document.createElement("div");
+          genderOptions.className = "gender-options";
+          genderOptions.innerHTML = `<strong>性别选择 / Gender</strong>${product.genders.map((gender) => `<button type="button" data-gender="${gender}">${gender}</button>`).join("")}`;
+          priceRow.after(genderOptions);
+        }
+
+        if (!Array.isArray(product.sizes) || product.sizes.length === 0 || card.querySelector(".size-options")) return;
+
+        const sizeOptions = document.createElement("div");
+        sizeOptions.className = "size-options";
+        sizeOptions.innerHTML = `<strong>尺寸选择 / Size</strong>${product.sizes.map((size) => `${size === "女1" ? '<span class="size-row-break"></span>' : ""}<button type="button" data-size="${size}">${size}</button>`).join("")}`;
+        const genderOptions = card.querySelector(".gender-options");
+        (genderOptions || priceRow).after(sizeOptions);
+      });
+
+      const catalogItems = window.siteContent?.catalogItems || [];
+      const catalogCards = document.querySelectorAll(".catalog-list > *");
+      catalogItems.forEach((item, index) => {
+        if (!Array.isArray(item.images) || item.images.length === 0) return;
+
+        const catalogCard = catalogCards[index];
+        if (!catalogCard || catalogCard.querySelector(".catalog-images")) return;
+
+        const title = catalogCard.querySelector("h3");
+        if (title && item.english && !catalogCard.querySelector(".catalog-en")) {
+          const englishName = document.createElement("p");
+          englishName.className = "catalog-en";
+          englishName.textContent = item.english;
+          title.after(englishName);
+        }
+
+        const imageWrap = document.createElement("div");
+        imageWrap.className = "catalog-images";
+
+        const image = document.createElement("img");
+        image.src = item.images[0];
+        image.alt = item.name;
+        image.loading = "lazy";
+        image.dataset.currentIndex = "0";
+        imageWrap.append(image);
+
+        if (item.images.length > 1) {
+          const nextButton = document.createElement("button");
+          nextButton.className = "catalog-next";
+          nextButton.type = "button";
+          nextButton.textContent = "下一张图片 / Next";
+          nextButton.dataset.catalogIndex = String(index);
+          imageWrap.append(nextButton);
+        }
+
+        catalogCard.append(imageWrap);
+      });
+    }
+
+    document.addEventListener("click", (event) => {
+      const nextButton = event.target.closest("[data-catalog-index]");
+      if (!nextButton) return;
+
+      const catalogIndex = Number(nextButton.dataset.catalogIndex);
+      const item = window.siteContent?.catalogItems?.[catalogIndex];
+      const image = nextButton.closest(".catalog-images")?.querySelector("img");
+      if (!item || !Array.isArray(item.images) || !image) return;
+
+      const currentIndex = Number(image.dataset.currentIndex || "0");
+      const nextIndex = (currentIndex + 1) % item.images.length;
+      image.src = item.images[nextIndex];
+      image.dataset.currentIndex = String(nextIndex);
+    });
+
+    document.addEventListener("click", (event) => {
+      const sizeButton = event.target.closest("[data-size]");
+      if (!sizeButton) return;
+
+      const card = sizeButton.closest(".product-card");
+      card.querySelectorAll("[data-size]").forEach((button) => button.classList.remove("is-selected"));
+      sizeButton.classList.add("is-selected");
+      card.dataset.selectedSize = sizeButton.dataset.size;
+    });
+
+    document.addEventListener("click", (event) => {
+      const genderButton = event.target.closest("[data-gender]");
+      if (!genderButton) return;
+
+      const card = genderButton.closest(".product-card");
+      card.querySelectorAll("[data-gender]").forEach((button) => button.classList.remove("is-selected"));
+      genderButton.classList.add("is-selected");
+      card.dataset.selectedGender = genderButton.dataset.gender;
+    });
+
+    document.addEventListener("click", (event) => {
+      const consultButton = event.target.closest(".product-card .card-link");
+      if (!consultButton) return;
+
+      const card = consultButton.closest(".product-card");
+      const selectedGender = card?.dataset.selectedGender;
+      const selectedSize = card?.dataset.selectedSize;
+      if (!selectedGender && !selectedSize) return;
+
+      setTimeout(() => {
+        const note = document.querySelector("[name='note']");
+        if (!note) return;
+
+        const selectedText = [
+          selectedGender ? `选择性别 / Gender：${selectedGender}` : "",
+          selectedSize ? `选择尺寸 / Size：${selectedSize}` : ""
+        ].filter(Boolean).join("\n");
+
+        if (note.value.includes("选择性别") || note.value.includes("选择尺寸")) return;
+        note.value = `${selectedText}${note.value ? `\n${note.value}` : ""}`;
+      }, 0);
+    });
+
+    applyShopEnhancements();
+    document.addEventListener("DOMContentLoaded", applyShopEnhancements);
+    window.addEventListener("load", applyShopEnhancements);
+    setTimeout(applyShopEnhancements, 300);
+    setTimeout(applyShopEnhancements, 1000);
+  </script>
+</body>
+</html>
