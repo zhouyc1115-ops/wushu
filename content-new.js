@@ -52,7 +52,7 @@ window.siteContent = {
       tag: "参考商品 / Reference",
       art: "art-broadsword",
       featured: false,
-      image: "assets/jingsaidao.jpg",
+      image: "assets/jingsaidao-new.jpg",
       sizes: ["男1", "男2", "男3", "男4", "男5", "男6", "男7", "男8", "男9", "女1", "女2", "女3", "女4", "女5", "女6", "女7"]
     },
     {

@@ -6,10 +6,15 @@
   <meta name="theme-color" content="#201d17">
   <title>创武武术器械馆 | Wushu Equipment & Costume Shop</title>
   <meta name="description" content="创武武术器械馆提供武术器械、表演服装与配件咨询。Chuangwu Martial Shop offers wushu weapons, performance costumes and training accessories.">
+  <link rel="canonical" href="https://chuangwusports.com/">
+  <meta property="og:title" content="创武武术器械馆 | Chuangwu Martial Shop">
+  <meta property="og:description" content="新加坡武术器械、武术服装与训练配件咨询。Wushu weapons, costumes and accessories in Singapore.">
+  <meta property="og:url" content="https://chuangwusports.com/">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260827-label-title-align">
+  <link rel="stylesheet" href="styles.css?v=20260828-enquire-font-final">
   <style>
     .hero-shop {
       position: relative;
@@ -218,6 +223,10 @@
       flex-wrap: wrap;
       gap: 8px;
       margin: 14px 28px 0;
+    }
+
+    .size-options {
+      margin-bottom: 2cm !important;
     }
 
     .size-options strong,
@@ -449,6 +458,28 @@
       color: #061012 !important;
       border-color: rgba(191, 238, 233, .72) !important;
       box-shadow: 0 12px 34px rgba(60, 222, 217, .18);
+    }
+
+    .product-card .card-link {
+      margin-top: auto !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      position: relative;
+      font-family: var(--sans) !important;
+      font-size: 22px !important;
+      font-weight: 950 !important;
+      line-height: 1.15 !important;
+      text-align: left !important;
+      letter-spacing: .01em !important;
+      min-height: 64px !important;
+      padding: 18px 56px 18px 0 !important;
+    }
+
+    .product-card .card-link span {
+      position: absolute;
+      right: 18px;
+      font-size: 24px !important;
+      line-height: 1 !important;
     }
 
     .button-light,
@@ -726,7 +757,7 @@
     </div>
   </div>
 
-  <script src="content-new.js?v=20260826-desc-break"></script>
+  <script src="content-new.js?v=20260828-enquire-font-final"></script>
   <script src="script.js?v=20260826-desc-break"></script>
   <script>
     function renderProductCardsIfNeeded() {
@@ -766,7 +797,7 @@
       const productImages = document.querySelectorAll(".product-card .product-art");
       const imagePaths = [
         "assets/xunliandao.jpg",
-        "assets/jingsaidao.jpg",
+        "assets/jingsaidao-new.jpg",
         "assets/jingsai-nandao.jpg",
         "assets/xublianjian.jpg",
         "assets/jingsaijian-new.jpg",

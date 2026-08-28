@@ -72,7 +72,7 @@ function renderProducts() {
         <h3>${product.name}</h3>
         <p>${product.description}</p>
         <div class="price-row"><strong>${product.price}</strong><span>${product.note || ''}</span></div>
-        <button class="card-link" data-product="${productLabel(product.name, product.english)}">咨询这件商品 <span>→</span></button>
+        <button class="card-link" data-product="${productLabel(product.name, product.english)}">咨询这件商品 / Enquire <span>→</span></button>
       </article>
     `;
   }).join('');
