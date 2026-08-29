@@ -27,7 +27,8 @@ window.siteContent = {
   categories: [
     { number: "01", name: "器械道具", english: "WEAPONS", link: "#products" },
     { number: "02", name: "武术服装", english: "COSTUMES", link: "#uniforms" },
-    { number: "03", name: "训练配件", english: "ACCESSORIES", link: "#training-accessories" }
+    { number: "03", name: "训练配件", english: "ACCESSORIES", link: "#training-accessories" },
+    { number: "04", name: "联系我们", english: "CONTACT US", link: "#contact" }
   ],
 
   products: [
