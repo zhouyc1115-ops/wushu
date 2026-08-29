@@ -297,6 +297,19 @@
       margin-top: 16px;
     }
 
+    .catalog-scan-note {
+      display: none;
+      color: #dffffa;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .catalog-scan-note.is-visible {
+      display: block;
+    }
+
     .catalog-images img {
       width: 100%;
       aspect-ratio: 4 / 5;
@@ -305,6 +318,11 @@
       border-radius: 18px;
       background: #fff;
       box-shadow: 0 16px 36px rgba(34, 92, 101, .12);
+    }
+
+    .catalog-images img.is-qr-image {
+      box-sizing: border-box;
+      padding: 12%;
     }
 
     .catalog-next {
@@ -1073,11 +1091,17 @@
         const imageWrap = document.createElement("div");
         imageWrap.className = "catalog-images";
 
+        const scanNote = document.createElement("div");
+        scanNote.className = "catalog-scan-note";
+        scanNote.textContent = "想要更多款式请扫描 / Scan for more styles";
+        imageWrap.append(scanNote);
+
         const image = document.createElement("img");
         image.src = item.images[0];
         image.alt = item.name;
         image.loading = "lazy";
         image.dataset.currentIndex = "0";
+        image.classList.toggle("is-qr-image", image.src.includes("costume-more-qr"));
         imageWrap.append(image);
 
         if (item.images.length > 1) {
@@ -1106,6 +1130,13 @@
       const nextIndex = (currentIndex + 1) % item.images.length;
       image.src = item.images[nextIndex];
       image.dataset.currentIndex = String(nextIndex);
+      const isQrImage = image.src.includes("costume-more-qr");
+      image.classList.toggle("is-qr-image", isQrImage);
+
+      const scanNote = nextButton.closest(".catalog-images")?.querySelector(".catalog-scan-note");
+      if (scanNote) {
+        scanNote.classList.toggle("is-visible", isQrImage);
+      }
     });
 
     document.addEventListener("click", (event) => {

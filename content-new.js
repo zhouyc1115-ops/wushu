@@ -209,7 +209,8 @@ window.siteContent = {
       description: "多色可选，可搭配腰带与队服方案。<br>Multiple colors available, with belt and team uniform options.",
       images: [
         "assets/changquan-taiji-costume-1.jpg",
-        "assets/changquan-taiji-costume-2.jpg"
+        "assets/changquan-taiji-costume-2.jpg",
+        "assets/costume-more-qr.png"
       ]
     },
     {
@@ -219,7 +220,8 @@ window.siteContent = {
       description: "适合南拳套路、比赛和舞台表演，可按款式与尺码咨询。<br>For Nanquan routines, competition and stage performance.",
       images: [
         "assets/nanquan-costume-1.jpg",
-        "assets/nanquan-costume-2.jpg"
+        "assets/nanquan-costume-2.jpg",
+        "assets/costume-more-qr.png"
       ]
     },
     {
@@ -229,7 +231,8 @@ window.siteContent = {
       description: "适合长拳套路、比赛和舞台表演，可按款式与尺码咨询。<br>For Changquan routines, competition and stage performance.",
       images: [
         "assets/changquan-costume-1.jpg",
-        "assets/changquan-costume-2.jpg"
+        "assets/changquan-costume-2.jpg",
+        "assets/costume-more-qr.png"
       ],
       id: "accessories"
     }
